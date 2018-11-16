@@ -1,0 +1,7 @@
+<map id="package1.Download.stateChanged" name="package1.Download.stateChanged">
+<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#ac03696f08099b94c2e08bc592c00a75c" title="package1.Download.run" alt="" coords="513,6,676,33"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a22f94d62b14de90cf26f5e58a0b3088f" title="this is method is hit whenever a state change is occured " alt="" coords="287,32,457,58"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1Download.html#a392016558af9a048fe6d87816521b29d" title="package1.Download.pause" alt="" coords="283,82,461,109"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1Download.html#a0945755e3d5b6fd69dac41c04b89609f" title="package1.Download.resume" alt="" coords="279,133,465,160"/>
+<area shape="rect" id="node6" href="$classpackage1_1_1Download.html#a0d14fac294c6d04dd96c7082c5dec7d4" title="package1.Download.cancel" alt="" coords="281,184,463,210"/>
+</map>
