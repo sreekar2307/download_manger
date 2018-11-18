@@ -1,0 +1,5 @@
+<map id="package1.DownloadManager.actionAdd" name="package1.DownloadManager.actionAdd">
+<area shape="rect" id="node2" href="$classpackage1_1_1DownloadManager.html#aa3cc6756378deaee02c0ceef9f61d9e3" title="this method checks weather the URL entered in the text field is a HTTP/HTTPS protocol or not ..." alt="" coords="305,5,559,32"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1DownloadTableModel.html#a0b8157c67374e524e067ad4a7fb5767a" title="package1.DownloadTableModel.add\lDownload" alt="" coords="316,57,548,98"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1DownloadTableModel.html#a71101ef4a1cdd037301eb371f5e6ff01" title="package1.DownloadTableModel.get\lRowCount" alt="" coords="607,57,836,98"/>
+</map>

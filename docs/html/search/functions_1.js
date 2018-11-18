@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['download',['Download',['../classpackage1_1_1Download.html#a3c5d92730a62bca10afefd7548036e26',1,'package1.Download.Download(URL url)'],['../classpackage1_1_1Download.html#ae9e1c1b01bf26ee61c3443c48806e653',1,'package1.Download.download()']]]
+  ['cancel',['cancel',['../classpackage1_1_1Download.html#a0d14fac294c6d04dd96c7082c5dec7d4',1,'package1::Download']]],
+  ['cleardownload',['clearDownload',['../classpackage1_1_1DownloadTableModel.html#aeec9706cc3de3d60df96209ed4ca4499',1,'package1::DownloadTableModel']]]
 ];

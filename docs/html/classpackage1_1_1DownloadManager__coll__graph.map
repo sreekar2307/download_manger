@@ -1,0 +1,4 @@
+<map id="package1.DownloadManager" name="package1.DownloadManager">
+<area shape="rect" id="node14" href="$classpackage1_1_1DownloadTableModel.html" title="This class represents the model of the JTable present in the final GUI. " alt="" coords="351,107,557,133"/>
+<area shape="rect" id="node10" href="$classpackage1_1_1Download.html" title="This class is the backbone for downloading a file from its URL. " alt="" coords="384,487,524,513"/>
+</map>

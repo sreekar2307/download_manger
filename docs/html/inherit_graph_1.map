@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classpackage1_1_1Main.html" title="package1.Main" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$classpackage1_1_1DownloadTableModel.html" title="This class represents the model of the JTable present in the final GUI. " alt="" coords="192,31,399,57"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1DownloadManager.html" title="The Main GUI class. " alt="" coords="200,93,391,120"/>
 </map>

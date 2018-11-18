@@ -1,3 +1,4 @@
 <map id="package1.Download.resume" name="package1.Download.resume">
-<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#a2f69d69a5483f5eacf050f5d3ea81c37" title="this is method is hit whenever a state change is occured " alt="" coords="240,5,465,32"/>
+<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#a2f69d69a5483f5eacf050f5d3ea81c37" title="this is method is hit whenever a state change is occurred " alt="" coords="240,5,465,32"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#ae9e1c1b01bf26ee61c3443c48806e653" title="creation of new thread for each download added and starting the thread " alt="" coords="253,56,452,83"/>
 </map>

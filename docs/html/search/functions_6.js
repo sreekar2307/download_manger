@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['resume',['resume',['../classpackage1_1_1Download.html#a0945755e3d5b6fd69dac41c04b89609f',1,'package1::Download']]],
-  ['run',['run',['../classpackage1_1_1Download.html#ac03696f08099b94c2e08bc592c00a75c',1,'package1::Download']]]
+  ['pause',['pause',['../classpackage1_1_1Download.html#a392016558af9a048fe6d87816521b29d',1,'package1::Download']]],
+  ['progressrenderer',['ProgressRenderer',['../classpackage1_1_1ProgressRenderer.html#a1e0c3504a2a64bc077dc092be69f3fe0',1,'package1::ProgressRenderer']]]
 ];

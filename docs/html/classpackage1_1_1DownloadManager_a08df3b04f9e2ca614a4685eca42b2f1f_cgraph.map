@@ -1,0 +1,7 @@
+<map id="package1.DownloadManager.actionResume" name="package1.DownloadManager.actionResume">
+<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#a0945755e3d5b6fd69dac41c04b89609f" title="package1.Download.resume" alt="" coords="306,52,493,79"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1DownloadManager.html#a0b128b091a3fb0f5d5fc9f0c281581aa" title="Handles the Logic when the buttons should be enabled and when they should be disabled at various..." alt="" coords="283,103,516,145"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a2f69d69a5483f5eacf050f5d3ea81c37" title="this is method is hit whenever a state change is occurred " alt="" coords="564,5,789,32"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1Download.html#ae9e1c1b01bf26ee61c3443c48806e653" title="creation of new thread for each download added and starting the thread " alt="" coords="577,56,776,83"/>
+<area shape="rect" id="node6" href="$classpackage1_1_1Download.html#a1c78eb3bfdc5f5102171ee7b63e80c4c" title="package1.Download.getStatus" alt="" coords="577,111,777,137"/>
+</map>

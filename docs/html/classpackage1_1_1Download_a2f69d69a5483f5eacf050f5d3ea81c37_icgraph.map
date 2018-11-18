@@ -1,7 +1,12 @@
 <map id="package1.Download.stateChanged" name="package1.Download.stateChanged">
-<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#ac03696f08099b94c2e08bc592c00a75c" title="package1.Download.run" alt="" coords="513,6,676,33"/>
-<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a22f94d62b14de90cf26f5e58a0b3088f" title="this is method is hit whenever a state change is occured " alt="" coords="287,32,457,58"/>
-<area shape="rect" id="node4" href="$classpackage1_1_1Download.html#a392016558af9a048fe6d87816521b29d" title="package1.Download.pause" alt="" coords="283,82,461,109"/>
-<area shape="rect" id="node5" href="$classpackage1_1_1Download.html#a0945755e3d5b6fd69dac41c04b89609f" title="package1.Download.resume" alt="" coords="279,133,465,160"/>
-<area shape="rect" id="node6" href="$classpackage1_1_1Download.html#a0d14fac294c6d04dd96c7082c5dec7d4" title="package1.Download.cancel" alt="" coords="281,184,463,210"/>
+<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#ac03696f08099b94c2e08bc592c00a75c" title="package1.Download.run" alt="" coords="547,5,709,32"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a22f94d62b14de90cf26f5e58a0b3088f" title="this is method is hit whenever a state change is occurred " alt="" coords="287,41,457,68"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1Download.html#a392016558af9a048fe6d87816521b29d" title="package1.Download.pause" alt="" coords="283,92,461,119"/>
+<area shape="rect" id="node8" href="$classpackage1_1_1Download.html#a0945755e3d5b6fd69dac41c04b89609f" title="package1.Download.resume" alt="" coords="279,143,465,169"/>
+<area shape="rect" id="node10" href="$classpackage1_1_1Download.html#a0d14fac294c6d04dd96c7082c5dec7d4" title="package1.Download.cancel" alt="" coords="281,200,463,227"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1DownloadManager.html#a9bd2c98f6034fe5156bbcc7555e4041a" title="Pause the download. " alt="" coords="513,70,743,111"/>
+<area shape="rect" id="node6" href="$classpackage1_1_1DownloadManager.html#a94739041d1749d6fc79c9ade70d7952b" title="package1.DownloadManager.\lDownloadManager" alt="" coords="791,135,985,177"/>
+<area shape="rect" id="node7" href="$classpackage1_1_1DownloadManager.html#a7493a3d3fa76b269621dafa729c0bc27" title="package1.DownloadManager.main" alt="" coords="1033,143,1256,169"/>
+<area shape="rect" id="node9" href="$classpackage1_1_1DownloadManager.html#a08df3b04f9e2ca614a4685eca42b2f1f" title="Resume the download Once paused. " alt="" coords="513,135,743,177"/>
+<area shape="rect" id="node11" href="$classpackage1_1_1DownloadManager.html#a516f3b9a872a40d355d0044c13c9a5e3" title="Cancel the selected download from the JTable. " alt="" coords="513,201,743,242"/>
 </map>
