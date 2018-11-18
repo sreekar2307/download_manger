@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['paused',['PAUSED',['../classpackage1_1_1Download.html#a14ff82ac1dece33156ce447d34c1453d',1,'package1::Download']]]
+  ['fileexitmenuitem',['fileExitMenuItem',['../classpackage1_1_1DownloadManager.html#a5aded0da84cfc68574d84672c987302e',1,'package1::DownloadManager']]],
+  ['filemenu',['fileMenu',['../classpackage1_1_1DownloadManager.html#afdd7c593565be862b95f6abd41a94e1f',1,'package1::DownloadManager']]]
 ];

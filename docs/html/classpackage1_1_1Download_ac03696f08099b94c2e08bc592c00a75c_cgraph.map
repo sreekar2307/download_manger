@@ -1,5 +1,5 @@
 <map id="package1.Download.run" name="package1.Download.run">
-<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#a22f94d62b14de90cf26f5e58a0b3088f" title="this is method is hit whenever a state change is occured " alt="" coords="240,5,411,32"/>
-<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a2f69d69a5483f5eacf050f5d3ea81c37" title="this is method is hit whenever a state change is occured " alt="" coords="483,31,708,57"/>
+<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#a22f94d62b14de90cf26f5e58a0b3088f" title="this is method is hit whenever a state change is occurred " alt="" coords="240,5,411,32"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a2f69d69a5483f5eacf050f5d3ea81c37" title="this is method is hit whenever a state change is occurred " alt="" coords="483,31,708,57"/>
 <area shape="rect" id="node4" href="$classpackage1_1_1Download.html#aaef2810496691df4b7ec1c16bf6d9af6" title="Here the name of the downloaded file is given. " alt="" coords="216,107,435,133"/>
 </map>

@@ -1,0 +1,12 @@
+<map id="package1.Download.getStatus" name="package1.Download.getStatus">
+<area shape="rect" id="node2" href="$classpackage1_1_1DownloadManager.html#a0b128b091a3fb0f5d5fc9f0c281581aa" title="Handles the Logic when the buttons should be enabled and when they should be disabled at various..." alt="" coords="253,169,487,211"/>
+<area shape="rect" id="node11" href="$classpackage1_1_1DownloadTableModel.html#a48dcffd4ab1798eafefc20aea53c90e6" title="package1.DownloadTableModel.get\lValueAt" alt="" coords="255,235,485,276"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1DownloadManager.html#a5254967dbc1d77c608aeac44de364b9b" title="This action is triggered when a Download is selected in the JTable from the GUI. " alt="" coords="540,5,763,47"/>
+<area shape="rect" id="node6" href="$classpackage1_1_1DownloadManager.html#a9bd2c98f6034fe5156bbcc7555e4041a" title="Pause the download. " alt="" coords="537,71,766,112"/>
+<area shape="rect" id="node7" href="$classpackage1_1_1DownloadManager.html#a08df3b04f9e2ca614a4685eca42b2f1f" title="Resume the download Once paused. " alt="" coords="537,136,766,177"/>
+<area shape="rect" id="node8" href="$classpackage1_1_1DownloadManager.html#a6febbff4b3a2f92476f8515ba7dcd3dc" title="Clear the selected download from the JTable. " alt="" coords="537,201,766,243"/>
+<area shape="rect" id="node9" href="$classpackage1_1_1DownloadManager.html#a516f3b9a872a40d355d0044c13c9a5e3" title="Cancel the selected download from the JTable. " alt="" coords="537,267,766,308"/>
+<area shape="rect" id="node10" href="$classpackage1_1_1DownloadManager.html#afe16efe86577cb93f327e0a39086becb" title="This method is fired whenever Download Object is. " alt="" coords="535,333,768,359"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1DownloadManager.html#a94739041d1749d6fc79c9ade70d7952b" title="package1.DownloadManager.\lDownloadManager" alt="" coords="816,136,1011,177"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1DownloadManager.html#a7493a3d3fa76b269621dafa729c0bc27" title="package1.DownloadManager.main" alt="" coords="1059,143,1281,170"/>
+</map>

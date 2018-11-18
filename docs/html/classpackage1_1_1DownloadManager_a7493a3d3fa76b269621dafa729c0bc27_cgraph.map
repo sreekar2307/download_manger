@@ -1,0 +1,22 @@
+<map id="package1.DownloadManager.main" name="package1.DownloadManager.main">
+<area shape="rect" id="node2" href="$classpackage1_1_1DownloadManager.html#a94739041d1749d6fc79c9ade70d7952b" title="package1.DownloadManager.\lDownloadManager" alt="" coords="276,186,471,227"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1DownloadManager.html#aee41ed0347487342ee60738a30345678" title="This action is triggered When the application is closed this terminates the program and stops all the..." alt="" coords="519,16,771,43"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1DownloadManager.html#a94df1fe267b67aa9bceac644e19c403e" title="This action is triggered when the The JButton addButton is clicked. " alt="" coords="519,67,771,93"/>
+<area shape="rect" id="node8" href="$classpackage1_1_1DownloadManager.html#a5254967dbc1d77c608aeac44de364b9b" title="This action is triggered when a Download is selected in the JTable from the GUI. " alt="" coords="533,121,756,162"/>
+<area shape="rect" id="node12" href="$classpackage1_1_1DownloadManager.html#a9bd2c98f6034fe5156bbcc7555e4041a" title="Pause the download. " alt="" coords="530,251,759,293"/>
+<area shape="rect" id="node15" href="$classpackage1_1_1DownloadManager.html#a08df3b04f9e2ca614a4685eca42b2f1f" title="Resume the download Once paused. " alt="" coords="530,317,759,358"/>
+<area shape="rect" id="node18" href="$classpackage1_1_1DownloadManager.html#a516f3b9a872a40d355d0044c13c9a5e3" title="Cancel the selected download from the JTable. " alt="" coords="530,186,759,227"/>
+<area shape="rect" id="node20" href="$classpackage1_1_1DownloadManager.html#a6febbff4b3a2f92476f8515ba7dcd3dc" title="Clear the selected download from the JTable. " alt="" coords="530,382,759,423"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1DownloadManager.html#aa3cc6756378deaee02c0ceef9f61d9e3" title="this method checks weather the URL entered in the text field is a HTTP/HTTPS protocol or not ..." alt="" coords="819,5,1072,32"/>
+<area shape="rect" id="node6" href="$classpackage1_1_1DownloadTableModel.html#a0b8157c67374e524e067ad4a7fb5767a" title="package1.DownloadTableModel.add\lDownload" alt="" coords="829,57,1061,98"/>
+<area shape="rect" id="node7" href="$classpackage1_1_1DownloadTableModel.html#a71101ef4a1cdd037301eb371f5e6ff01" title="package1.DownloadTableModel.get\lRowCount" alt="" coords="1120,57,1349,98"/>
+<area shape="rect" id="node9" href="$classpackage1_1_1DownloadTableModel.html#abadc7bb4b1ecf306ad2800d11f2caae6" title="package1.DownloadTableModel.get\lDownload" alt="" coords="831,122,1060,163"/>
+<area shape="rect" id="node10" href="$classpackage1_1_1DownloadManager.html#a0b128b091a3fb0f5d5fc9f0c281581aa" title="Handles the Logic when the buttons should be enabled and when they should be disabled at various..." alt="" coords="829,239,1062,281"/>
+<area shape="rect" id="node11" href="$classpackage1_1_1Download.html#a1c78eb3bfdc5f5102171ee7b63e80c4c" title="package1.Download.getStatus" alt="" coords="1135,247,1335,273"/>
+<area shape="rect" id="node13" href="$classpackage1_1_1Download.html#a392016558af9a048fe6d87816521b29d" title="package1.Download.pause" alt="" coords="856,305,1035,332"/>
+<area shape="rect" id="node14" href="$classpackage1_1_1Download.html#a2f69d69a5483f5eacf050f5d3ea81c37" title="this is method is hit whenever a state change is occurred " alt="" coords="1122,305,1347,332"/>
+<area shape="rect" id="node16" href="$classpackage1_1_1Download.html#a0945755e3d5b6fd69dac41c04b89609f" title="package1.Download.resume" alt="" coords="852,356,1039,383"/>
+<area shape="rect" id="node17" href="$classpackage1_1_1Download.html#ae9e1c1b01bf26ee61c3443c48806e653" title="creation of new thread for each download added and starting the thread " alt="" coords="1135,356,1334,383"/>
+<area shape="rect" id="node19" href="$classpackage1_1_1Download.html#a0d14fac294c6d04dd96c7082c5dec7d4" title="package1.Download.cancel" alt="" coords="854,188,1037,215"/>
+<area shape="rect" id="node21" href="$classpackage1_1_1DownloadTableModel.html#aeec9706cc3de3d60df96209ed4ca4499" title="package1.DownloadTableModel.clear\lDownload" alt="" coords="826,407,1065,449"/>
+</map>

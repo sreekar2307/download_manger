@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['Main',['../classpackage1_1_1Main.html',1,'package1']]]
+  ['progressrenderer',['ProgressRenderer',['../classpackage1_1_1ProgressRenderer.html',1,'package1']]]
 ];

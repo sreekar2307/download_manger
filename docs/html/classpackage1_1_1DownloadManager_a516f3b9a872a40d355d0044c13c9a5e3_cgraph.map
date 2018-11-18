@@ -1,0 +1,6 @@
+<map id="package1.DownloadManager.actionCancel" name="package1.DownloadManager.actionCancel">
+<area shape="rect" id="node2" href="$classpackage1_1_1Download.html#a0d14fac294c6d04dd96c7082c5dec7d4" title="package1.Download.cancel" alt="" coords="308,5,491,32"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1DownloadManager.html#a0b128b091a3fb0f5d5fc9f0c281581aa" title="Handles the Logic when the buttons should be enabled and when they should be disabled at various..." alt="" coords="283,57,516,98"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a2f69d69a5483f5eacf050f5d3ea81c37" title="this is method is hit whenever a state change is occurred " alt="" coords="564,5,789,32"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1Download.html#a1c78eb3bfdc5f5102171ee7b63e80c4c" title="package1.Download.getStatus" alt="" coords="577,64,777,91"/>
+</map>

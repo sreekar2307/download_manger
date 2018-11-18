@@ -1,0 +1,10 @@
+<map id="package1.DownloadManager.updateButtons" name="package1.DownloadManager.updateButtons">
+<area shape="rect" id="node2" href="$classpackage1_1_1DownloadManager.html#a5254967dbc1d77c608aeac44de364b9b" title="This action is triggered when a Download is selected in the JTable from the GUI. " alt="" coords="292,5,515,47"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1DownloadManager.html#a9bd2c98f6034fe5156bbcc7555e4041a" title="Pause the download. " alt="" coords="289,71,518,112"/>
+<area shape="rect" id="node6" href="$classpackage1_1_1DownloadManager.html#a08df3b04f9e2ca614a4685eca42b2f1f" title="Resume the download Once paused. " alt="" coords="289,136,518,177"/>
+<area shape="rect" id="node7" href="$classpackage1_1_1DownloadManager.html#a6febbff4b3a2f92476f8515ba7dcd3dc" title="Clear the selected download from the JTable. " alt="" coords="289,201,518,243"/>
+<area shape="rect" id="node8" href="$classpackage1_1_1DownloadManager.html#a516f3b9a872a40d355d0044c13c9a5e3" title="Cancel the selected download from the JTable. " alt="" coords="289,267,518,308"/>
+<area shape="rect" id="node9" href="$classpackage1_1_1DownloadManager.html#afe16efe86577cb93f327e0a39086becb" title="This method is fired whenever Download Object is. " alt="" coords="287,333,520,359"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1DownloadManager.html#a94739041d1749d6fc79c9ade70d7952b" title="package1.DownloadManager.\lDownloadManager" alt="" coords="568,136,763,177"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1DownloadManager.html#a7493a3d3fa76b269621dafa729c0bc27" title="package1.DownloadManager.main" alt="" coords="811,143,1033,170"/>
+</map>

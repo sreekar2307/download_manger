@@ -1,3 +1,7 @@
 <map id="package1.Download.download" name="package1.Download.download">
 <area shape="rect" id="node2" href="$classpackage1_1_1Download.html#a3c5d92730a62bca10afefd7548036e26" title="calls to the download function were the actual download starts " alt="" coords="252,5,455,32"/>
+<area shape="rect" id="node3" href="$classpackage1_1_1Download.html#a0945755e3d5b6fd69dac41c04b89609f" title="package1.Download.resume" alt="" coords="260,56,447,83"/>
+<area shape="rect" id="node4" href="$classpackage1_1_1DownloadManager.html#a08df3b04f9e2ca614a4685eca42b2f1f" title="Resume the download Once paused. " alt="" coords="503,49,732,90"/>
+<area shape="rect" id="node5" href="$classpackage1_1_1DownloadManager.html#a94739041d1749d6fc79c9ade70d7952b" title="package1.DownloadManager.\lDownloadManager" alt="" coords="780,49,975,90"/>
+<area shape="rect" id="node6" href="$classpackage1_1_1DownloadManager.html#a7493a3d3fa76b269621dafa729c0bc27" title="package1.DownloadManager.main" alt="" coords="1023,56,1245,83"/>
 </map>

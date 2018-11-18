@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['download',['Download',['../classpackage1_1_1Download.html',1,'package1.Download'],['../classpackage1_1_1Download.html#a3c5d92730a62bca10afefd7548036e26',1,'package1.Download.Download(URL url)'],['../classpackage1_1_1Download.html#ae9e1c1b01bf26ee61c3443c48806e653',1,'package1.Download.download()']]],
-  ['download_2ejava',['Download.java',['../Download_8java.html',1,'']]],
-  ['downloaded',['downloaded',['../classpackage1_1_1Download.html#a54bbb06e0700752b9e854686a6922fac',1,'package1::Download']]],
-  ['downloading',['DOWNLOADING',['../classpackage1_1_1Download.html#a9fb49e4b50de96aac76e559f4e2823f4',1,'package1::Download']]]
+  ['cancel',['cancel',['../classpackage1_1_1Download.html#a0d14fac294c6d04dd96c7082c5dec7d4',1,'package1::Download']]],
+  ['cancelbutton',['cancelButton',['../classpackage1_1_1DownloadManager.html#aa371adea962067da93fb32974733f723',1,'package1::DownloadManager']]],
+  ['cancelled',['CANCELLED',['../classpackage1_1_1Download.html#a4104acebd15dbd4f685343ffe9b14a6b',1,'package1::Download']]],
+  ['cleardownload',['clearDownload',['../classpackage1_1_1DownloadTableModel.html#aeec9706cc3de3d60df96209ed4ca4499',1,'package1::DownloadTableModel']]],
+  ['clearing',['clearing',['../classpackage1_1_1DownloadManager.html#a02143cae251169173a37ea8214a6ea07',1,'package1::DownloadManager']]],
+  ['columnclasses',['columnClasses',['../classpackage1_1_1DownloadTableModel.html#aa059e2c4e0ab5aa1dcc88fe4a14e9a17',1,'package1::DownloadTableModel']]],
+  ['columnnames',['columnNames',['../classpackage1_1_1DownloadTableModel.html#ad01564e1df79ed7e2d4f5d5458582350',1,'package1::DownloadTableModel']]],
+  ['complete',['COMPLETE',['../classpackage1_1_1Download.html#a78be767525da2972f574212580873663',1,'package1::Download']]]
 ];
