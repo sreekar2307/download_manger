@@ -10,7 +10,7 @@
 			filesetmanifest="mergewithoutmain">
 			<manifest>
 				<attribute name="Main-Class"
-					value="package1.DownloadManager" />
+					value="download.manager.DownloadManager" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
 			<fileset dir="${dir.buildfile}/bin" />
@@ -19,7 +19,7 @@
 	
 	<target name="compile">
 	  <mkdir dir="./bin"/>
-		<javac includeantruntime="false" srcdir="./src/package1"
+		<javac includeantruntime="false" srcdir="./src/download/manager"
 			destdir="./bin" />
 	</target>
 	
