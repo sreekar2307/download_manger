@@ -24,7 +24,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.SwingUtilities;
 
 /**
- * @short The Main GUI class 
+ * The Main GUI class. 
  * @author Sreekar Reddy, C. Rohith, Althaf Md.
  *
  */
@@ -45,10 +45,10 @@ public class DownloadManager extends JFrame implements Observer{
   private JMenuItem fileExitMenuItem; ///< menuItem EXIT presented when clicked FILE menu
 
   /**
-   * @breif constructor of the main class which is the JFrame
+   * constructor of the main class which is the JFrame.
    * 
    */
-  public DownloadManager(){
+  public DownloadManager() {
     setTitle("Download Manager");
     setSize(640,480);
     addWindowListener(new WindowAdapter() {
@@ -72,7 +72,7 @@ public class DownloadManager extends JFrame implements Observer{
 
 
     /**
-     * Setting up the Panel on the JFrame
+     * Setting up the Panel on the JFrame.
      */
 
     JPanel addPanel = new JPanel();
@@ -83,19 +83,19 @@ public class DownloadManager extends JFrame implements Observer{
     addPanel.add(addButton);
 
     /**
-     * Setting up the Downloads JTable on the JFrame
+     * Setting up the Downloads JTable on the JFrame.
      */
     tableModel = new DownloadTableModel();
     table = new JTable(tableModel);
     table.getSelectionModel().addListSelectionListener(e -> tableSelectionChanged());
 
     /**
-     * Allow only one row at a time to be selected
+     * Allow only one row at a time to be selected.
      */
     table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
     /**
-     * setting up the progress bar column on the JTable
+     * setting up the progress bar column on the JTable.
      */
     ProgressRenderer renderer = new ProgressRenderer(0,100);
     renderer.setStringPainted(true);
@@ -103,17 +103,13 @@ public class DownloadManager extends JFrame implements Observer{
     table.setRowHeight((int)renderer.getPreferredSize().getHeight());
 
     /**
-     * Setting up the JPanel in which the JTable will be present
+     * Setting up the JPanel in which the JTable will be present.
      */
     JPanel  downloadsPanel = new JPanel();
     downloadsPanel.setBorder(BorderFactory.createTitledBorder("Downloads"));
     downloadsPanel.setLayout(new BorderLayout());
     downloadsPanel.add(new JScrollPane(table),BorderLayout.CENTER);
 
-    /**
-     * Setting Up Buttons Panel
-     */
-    JPanel buttonsPanel = new JPanel();
     /*
      * Pause Button
      */
@@ -148,6 +144,10 @@ public class DownloadManager extends JFrame implements Observer{
     /**
      * adding all the buttons to the buttons panel
      */
+    /**
+     * Setting Up Buttons Panel.
+     */
+    JPanel buttonsPanel = new JPanel();
     buttonsPanel.add(pauseButton);
     buttonsPanel.add(resumeButton);
     buttonsPanel.add(clearButton);
@@ -163,20 +163,22 @@ public class DownloadManager extends JFrame implements Observer{
   }
 
   /**
-   * @short This action is triggered when a Download is selected in the JTable from the GUI
+   * This action is triggered when a Download is selected in the JTable from the GUI.
    */
 
   private void tableSelectionChanged() {
     /**
-     * Check if the none other Download is selected previously if so remove the DownloadManger as its observer
+     * Check if the none other Download is selected previously
+     *  if so remove the DownloadManger as its observer
      */
-    if(selectedDownload!=null)
+    if (selectedDownload != null) {
       selectedDownload.deleteObserver(DownloadManager.this);
+    }  
     /**
      * Add DownloadManager as the observer for the selected Download object 
      */
     
-    if(!clearing && table.getSelectedRow() >-1) {
+    if (!clearing && table.getSelectedRow() >  -1) {
       selectedDownload = tableModel.getDownload(table.getSelectedRow());
       selectedDownload.addObserver(DownloadManager.this);
       updateButtons();
@@ -184,7 +186,7 @@ public class DownloadManager extends JFrame implements Observer{
   }
   
   /**
-   * @short Pause the download 
+   * Pause the download. 
    */
   
   private void actionPause() {
@@ -194,7 +196,7 @@ public class DownloadManager extends JFrame implements Observer{
   }
   
   /**
-   *  @short Resume the download Once paused
+   * Resume the download Once paused.
    */
   
   private void actionResume() {
@@ -203,19 +205,19 @@ public class DownloadManager extends JFrame implements Observer{
   }
   
   /**
-   * @short  Clear the selected download from the JTable 
+   * Clear the selected download from the JTable. 
    */
   
   private void actionClear() {
-    clearing =true;
+    clearing = true;
     tableModel.clearDownload(table.getSelectedRow());
-    clearing =false;
-    selectedDownload=null;
+    clearing = false;
+    selectedDownload = null;
     updateButtons();
   }
   
   /**
-   * @short  Cancel the selected download from the JTable 
+   * Cancel the selected download from the JTable. 
    */
   
   private void actionCancel() {
@@ -224,42 +226,40 @@ public class DownloadManager extends JFrame implements Observer{
   }
   
   /**
-   * @short Handles the Logic when the buttons should be enabled and when they should be disabled at various
-   * @short states for the downloading file can get into
+   * Handles the Logic when the buttons should be enabled. 
+   * and when they should be disabled at various.
+   * states for the downloading file can get into.
    */
   
   private void updateButtons() {
-    if(selectedDownload!=null)
-    {
+    if (selectedDownload != null) {
       int status = selectedDownload.getStatus();
-      switch (status)
-      {
-      case Download.DOWNLOADING:
-        pauseButton.setEnabled(true);
-        resumeButton.setEnabled(false);
-        cancelButton.setEnabled(true);
-        clearButton.setEnabled(false);
-        break;
-      case Download.PAUSED:
-        pauseButton.setEnabled(false);
-        resumeButton.setEnabled(true);
-        cancelButton.setEnabled(true);
-        clearButton.setEnabled(false);
-        break;
-      case Download.ERROR:
-        pauseButton.setEnabled(false);
-        resumeButton.setEnabled(true);
-        cancelButton.setEnabled(false);
-        clearButton.setEnabled(true);
-        break;
-      default: // COMPLETE or CANCELLED
-        pauseButton.setEnabled(false);
-        resumeButton.setEnabled(false);
-        cancelButton.setEnabled(false);
-        clearButton.setEnabled(true);
+      switch (status) {
+        case Download.DOWNLOADING:
+          pauseButton.setEnabled(true);
+          resumeButton.setEnabled(false);
+          cancelButton.setEnabled(true);
+          clearButton.setEnabled(false);
+          break;
+        case Download.PAUSED:
+          pauseButton.setEnabled(false);
+          resumeButton.setEnabled(true);
+          cancelButton.setEnabled(true);
+          clearButton.setEnabled(false);
+          break;
+        case Download.ERROR:
+          pauseButton.setEnabled(false);
+          resumeButton.setEnabled(true);
+          cancelButton.setEnabled(false);
+          clearButton.setEnabled(true);
+          break;
+        default: // COMPLETE or CANCELLED
+          pauseButton.setEnabled(false);
+          resumeButton.setEnabled(false);
+          cancelButton.setEnabled(false);
+          clearButton.setEnabled(true);
       }
-    }
-    else {
+    } else {
       // No download is selected in table.
       pauseButton.setEnabled(false);
       resumeButton.setEnabled(false);
@@ -269,7 +269,8 @@ public class DownloadManager extends JFrame implements Observer{
   } 
 
   /**
-   * @short This action is triggered When the application is closed this terminates the program and stops all the threads
+   * This action is triggered When the application is closed.
+   * this terminates the program and stops all the threads
    */
 
   private void actionExit() {
@@ -277,41 +278,44 @@ public class DownloadManager extends JFrame implements Observer{
   }
 
   /**
-   * @short This action is triggered when the The JButton addButton is clicked
+   * This action is triggered when the The JButton addButton is clicked.
    */
 
   private void actionAdd() {
     URL verifiedUrl = verifyURL(addTextField.getText());
-    if(verifiedUrl!=null) {
+    if (verifiedUrl != null) {
       tableModel.addDownload(new Download(verifiedUrl));
       addTextField.setText(""); // reset add text field
-    }else {
+    } else {
       JOptionPane.showMessageDialog(this,"Invalid Download URL","Error", JOptionPane.ERROR_MESSAGE);
     }
   }
 
   /**
-   * @short this method checks weather the URL entered in the text field is a HTTP/HTTPS protocol or not 
+   * this method checks weather the URL entered in the text field is a HTTP/HTTPS protocol or not. 
    * @param url  extracted from the text field 
    * @return verifiedUrl
    */
+  
   private URL verifyURL(String url) {
     /**
      *  Allow only HTTP and HTTPS URL's
      */
-    if(!url.toLowerCase().startsWith("http://") && !url.toLowerCase().startsWith("https://"))
+    if (!url.toLowerCase().startsWith("http://") && !url.toLowerCase().startsWith("https://")) {
       return null;
+    }  
 
     // Verify format of URL
     URL verifiedUrl = null;
     try {
       verifiedUrl = new URL(url);
-    }catch(Exception e) {
+    } catch (Exception e) {
       return null;
     }
     // Make sure URL specifies a file
-    if(verifiedUrl.getFile().length()<2)
+    if (verifiedUrl.getFile().length() < 2) {
       return null;
+    }  
     return verifiedUrl;
   }
 
@@ -320,14 +324,20 @@ public class DownloadManager extends JFrame implements Observer{
    * @short This method is fired whenever Download Object is 
    */
   public void update(Observable o, Object arg) {
-    if(selectedDownload!=null && selectedDownload.equals(o))
+    if (selectedDownload != null && selectedDownload.equals(o)) {
       SwingUtilities.invokeLater(() -> updateButtons());
+    }  
   }
-
-  public static void main(String[] args){
+  
+  /**
+  * Main method the control flow starts form here.
+  * @param args no command line args are required.
+  */
+  
+  public static void main(String[] args) {
     SwingUtilities.invokeLater(() -> {
-        DownloadManager downloadManager = new DownloadManager();
-        downloadManager.setVisible(true);
+      DownloadManager downloadManager = new DownloadManager();
+      downloadManager.setVisible(true);
     });
   }
 
