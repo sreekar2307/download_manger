@@ -1,15 +1,9 @@
-package package1;
+package download.manager;
 
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.net.URL;
 import java.util.Observable;
 import java.util.Observer;
@@ -28,8 +22,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingUtilities;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+
 /**
  * @short The Main GUI class 
  * @author Sreekar Reddy, C. Rohith, Althaf Md.
@@ -41,11 +34,13 @@ public class DownloadManager extends JFrame implements Observer{
   private JTextField addTextField; ///< Add download text field.
   private DownloadTableModel tableModel; ///<  Download table's data model.
   private JTable table;  ///< Table showing downloads.
-  private JButton pauseButton, resumeButton; ///< These are the buttons for managing the selected download.
-  private JButton cancelButton, clearButton; ///< These are the buttons for managing the selected download. 
+  private JButton pauseButton;
+  private JButton resumeButton; ///< These are the buttons for managing the selected download.
+  private JButton cancelButton; ///< These are the buttons for managing the selected download. 
+  private JButton clearButton;
   private Download selectedDownload; ///< Currently selected download.
   private boolean clearing;  ///< Flag for whether or not table selection is being cleared.
-  private JMenuBar menuBar;  ///< menu bar on the JFrame
+  private JMenuBar menubar;  ///< menu bar on the JFrame
   private JMenu fileMenu; ///< menu option FILE
   private JMenuItem fileExitMenuItem; ///< menuItem EXIT presented when clicked FILE menu
 
@@ -57,27 +52,23 @@ public class DownloadManager extends JFrame implements Observer{
     setTitle("Download Manager");
     setSize(640,480);
     addWindowListener(new WindowAdapter() {
+      @Override
       public void windowClosing(WindowEvent e) {
         actionExit();
       }
-
     });
 
     /**
      * Code for menu bar and Exit MenuItem
      */
-    menuBar = new JMenuBar();
+    menubar = new JMenuBar();
     fileMenu = new JMenu("File");
     fileMenu.setMnemonic(KeyEvent.VK_F);
     fileExitMenuItem = new JMenuItem("Exit",KeyEvent.VK_X);
-    fileExitMenuItem.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent e) {
-        actionExit();
-      }
-    });
+    fileExitMenuItem.addActionListener(e -> actionExit());
     fileMenu.add(fileExitMenuItem);
-    menuBar.add(fileMenu);
-    setJMenuBar(menuBar);
+    menubar.add(fileMenu);
+    setJMenuBar(menubar);
 
 
     /**
@@ -88,13 +79,7 @@ public class DownloadManager extends JFrame implements Observer{
     addTextField = new JTextField(30);
     addPanel.add(addTextField);
     JButton addButton = new JButton("Add Download");
-    addButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        actionAdd();
-      }
-    });
+    addButton.addActionListener(e -> actionAdd());
     addPanel.add(addButton);
 
     /**
@@ -102,12 +87,7 @@ public class DownloadManager extends JFrame implements Observer{
      */
     tableModel = new DownloadTableModel();
     table = new JTable(tableModel);
-    table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {    
-      @Override
-      public void valueChanged(ListSelectionEvent e) {
-        tableSelectionChanged();
-      }
-    });
+    table.getSelectionModel().addListSelectionListener(e -> tableSelectionChanged());
 
     /**
      * Allow only one row at a time to be selected
@@ -138,13 +118,7 @@ public class DownloadManager extends JFrame implements Observer{
      * Pause Button
      */
     pauseButton = new JButton("Pause");
-    pauseButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {  
-        actionPause();
-      }
-
-    });
+    pauseButton.addActionListener(e -> actionPause());
     pauseButton.setEnabled(false);
 
     /*
@@ -152,12 +126,7 @@ public class DownloadManager extends JFrame implements Observer{
      */
 
     resumeButton = new JButton("Resume");
-    resumeButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {  
-        actionResume();
-      } 
-    });
+    resumeButton.addActionListener(e -> actionResume());
     resumeButton.setEnabled(false);
 
     /*
@@ -165,12 +134,7 @@ public class DownloadManager extends JFrame implements Observer{
      */
 
     cancelButton = new JButton("Cancel");
-    cancelButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {  
-        actionCancel();
-      } 
-    });
+    cancelButton.addActionListener(e -> actionCancel());
     cancelButton.setEnabled(false);   
 
     /*
@@ -178,12 +142,7 @@ public class DownloadManager extends JFrame implements Observer{
      */
 
     clearButton = new JButton("Clear");
-    clearButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {  
-        actionClear();
-      } 
-    });
+    clearButton.addActionListener(e -> actionClear());
     clearButton.setEnabled(false);
 
     /**
@@ -208,7 +167,6 @@ public class DownloadManager extends JFrame implements Observer{
    */
 
   private void tableSelectionChanged() {
-    // TODO Auto-generated method stub
     /**
      * Check if the none other Download is selected previously if so remove the DownloadManger as its observer
      */
@@ -230,7 +188,6 @@ public class DownloadManager extends JFrame implements Observer{
    */
   
   private void actionPause() {
-    // TODO Auto-generated method stub
     selectedDownload.pause();
     updateButtons();
 
@@ -272,7 +229,6 @@ public class DownloadManager extends JFrame implements Observer{
    */
   
   private void updateButtons() {
-    // TODO Auto-generated method stub
     if(selectedDownload!=null)
     {
       int status = selectedDownload.getStatus();
@@ -364,25 +320,15 @@ public class DownloadManager extends JFrame implements Observer{
    * @short This method is fired whenever Download Object is 
    */
   public void update(Observable o, Object arg) {
-    // TODO Auto-generated method stub
     if(selectedDownload!=null && selectedDownload.equals(o))
-      SwingUtilities.invokeLater(new Runnable(){
-        @Override
-        public void run() {       
-          updateButtons();
-        }
-      });
+      SwingUtilities.invokeLater(() -> updateButtons());
   }
 
-  public static void main(String args[]) throws IOException{
-    SwingUtilities.invokeLater(new Runnable() {
-      public void run() {
+  public static void main(String[] args){
+    SwingUtilities.invokeLater(() -> {
         DownloadManager downloadManager = new DownloadManager();
         downloadManager.setVisible(true);
-      }
     });
-    //    Download test = new Download(new URL("http://www.africau.edu/images/default/sample.pdf"));
-
   }
 
 

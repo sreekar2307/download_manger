@@ -1,4 +1,4 @@
-package package1;
+package download.manager;
 
 import java.awt.Component;
 

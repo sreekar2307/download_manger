@@ -1,11 +1,12 @@
-package package1;
+package download.manager;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Observable;
+
+import javax.net.ssl.HttpsURLConnection;
 /**
  * @mainpage The Download manager
  * @author Sreekar Reddy, C. Rohith, Althaf Md.
@@ -37,10 +38,10 @@ public class Download  extends Observable implements Runnable{
 	/**
 	 * All states the downloading life can get into
 	 */
-	public static final String STATUSES[] = {"Downloading","Paused","Complete","Cancelled","Error"};
+	protected static final String[] STATUSES = {"Downloading","Paused","Complete","Cancelled","Error"};
 	public static final int DOWNLOADING = 0; ///< One of the state of the downloading file 
 	public static final int PAUSED = 1;///< state when the downloading file is paused
-	public static final int COMPLETE = 2; ///< stae when the downloading file is completed downloading
+	public static final int COMPLETE = 2; ///< state when the downloading file is completed downloading
 	public static final int CANCELLED =3; ///< state when the downloading file is Cancelled
 	public static final int ERROR = 4;  ///< stae when the downloading file enconters an error
 
@@ -77,13 +78,19 @@ public class Download  extends Observable implements Runnable{
 	}
 	@Override
 	/**
-	 * @breif Thread run function which gets executed when start() method is called. Overriden method 
+	 * Thread run function which gets executed when start() method is called. Overriden method. 
 	 */
 	public void run() { 
 		RandomAccessFile file = null;  // To read and wirte to the downloaded file
 		InputStream stream = null;    // Stream of data from the URL 
 		try {
 			HttpURLConnection connection  = (HttpURLConnection) url.openConnection(); 
+			if (url.openConnection() instanceof HttpURLConnection) {
+				connection  = (HttpURLConnection) url.openConnection();
+			}
+			else {
+				connection  = (HttpsURLConnection) url.openConnection();
+			}			
 			connection.setRequestProperty("Range","bytes="+downloaded + "-");
 			connection.connect();
 			/*
@@ -105,7 +112,7 @@ public class Download  extends Observable implements Runnable{
 			file.seek(downloaded);
 			stream = connection.getInputStream();
 			while(status == DOWNLOADING) {
-				byte buffer[];  // temp place to store the data from the downloading file
+				byte[] buffer;  // temp place to store the data from the downloading file
 				if(size - downloaded > MAX_BUFFER_SIZE) {
 					buffer =  new byte[MAX_BUFFER_SIZE];
 				}
@@ -128,19 +135,23 @@ public class Download  extends Observable implements Runnable{
 				stateChanged();
 			}
 		}
-		catch(Exception e) {
+		catch (Exception e) {
 			error();
 		}finally {
 			if(file!= null) {
 				try {
 					file.close();
-				}catch(Exception e) {}
+				}catch(Exception e) {
+					error();
+				}
 			}
 			if(stream!=null)
 			{
 				try {
 					stream.close();
-				} catch (Exception e) {}
+				} catch (Exception e) {
+					error();
+				  }
 			}
 		}
 
@@ -159,7 +170,7 @@ public class Download  extends Observable implements Runnable{
      * @short this is method is hit whenever a state change is occured 
      */
 	
-	private void error() {
+	public void error() {
 		status = ERROR;
 		stateChanged();
 	}
@@ -196,7 +207,10 @@ public class Download  extends Observable implements Runnable{
      */
 	
 	public float getProgress() {
-		return (float)((downloaded/size) * 100) ; 
+		/*
+		 * Recovered using the debugger
+		 */ 
+		return ((float) downloaded / size) * 100; 
 	}
 	
    /**
@@ -215,6 +229,10 @@ public class Download  extends Observable implements Runnable{
 	public void resume() {
 		status = DOWNLOADING;
 		stateChanged();
+		/**
+		 * Rectified using debugging tool
+		 */
+		download();
 	}
 	
     /**

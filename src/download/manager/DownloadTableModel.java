@@ -1,4 +1,4 @@
-package package1;
+package download.manager;
 
 import java.util.ArrayList;
 import java.util.Observable;
@@ -17,7 +17,7 @@ public class DownloadTableModel extends AbstractTableModel implements Observer{
 
 	private static final Class[] columnClasses = {String.class,String.class,JProgressBar.class,String.class}; ///< which class does each column belong in the JTable
 	
-	private ArrayList<Download> downloadList = new ArrayList<Download>(); ///< The ArrayList containing the list of currently downloading files in the JTable
+	private ArrayList<Download> downloadList = new ArrayList<>(); ///< The ArrayList containing the list of currently downloading files in the JTable
 	
     public void addDownload(Download download) {
     	download.addObserver(this);
@@ -30,22 +30,25 @@ public class DownloadTableModel extends AbstractTableModel implements Observer{
     }
     public void clearDownload(int row) {
     	downloadList.remove(row);
-    	fireTableRowsInserted(row,row);
+    	/**
+    	 * Rectified using debugging tool
+    	 */
+    	fireTableRowsDeleted(row,row);
     }
 	@Override
 	public int getRowCount() {
-		// TODO Auto-generated method stub
 		return downloadList.size();
 	}
 
 	@Override
 	public int getColumnCount() {
-		// TODO Auto-generated method stub
 		return columnNames.length;
 	}
+	@Override
     public String getColumnName(int col) {
     	return columnNames[col];
     }
+	@Override
     public Class<?> getColumnClass(int col){
     	return  columnClasses[col];
     }
@@ -56,15 +59,15 @@ public class DownloadTableModel extends AbstractTableModel implements Observer{
 		case 0: return download.getUrl();
 		case 1: int size = download.getSize();
 				return (size==-1)? "":Integer.toString(size); 
-		case 2:return new Float(download.getProgress());
+		case 2:return  Float.valueOf(download.getProgress());
 		case 3:return Download.STATUSES[download.getStatus()];
+		default: download.error(); 
 		}
 		return "";
 	}
 
 	@Override
 	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
 		
 		int index = downloadList.indexOf(o);
 		
